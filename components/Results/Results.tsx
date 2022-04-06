@@ -28,15 +28,32 @@ const Results = ({ results, numberOfDaysToShow = 7 }: IResults) => {
       {currentCard && (
         <div className={styles.card} data-testid="forecast-card">
           {currentCard?.forecast?.map((f) => (
-            <div key={f.name}>
+            <div key={f.name} data-testid="forecast-card-item">
               <div className={styles.image}>
-                <img alt={f.shortForecast} src={f.icon} />
+                <img
+                  alt={f.shortForecast}
+                  src={f.icon}
+                  data-testid="forecast-card-item-image"
+                />
               </div>
-              <span className={styles.dayName}>{f.name}</span>
-              <span className={styles.temperature}>
+              <span
+                className={styles.dayName}
+                data-testid="forecast-card-item-name"
+              >
+                {f.name}
+              </span>
+              <span
+                className={styles.temperature}
+                data-testid="forecast-card-item-temperature"
+              >
                 {f.temperature}°{f.temperatureUnit}
               </span>
-              <span className={styles.forecast}>{f.detailedForecast}</span>
+              <span
+                className={styles.forecast}
+                data-testid="forecast-card-item-detailed-forecast"
+              >
+                {f.detailedForecast}
+              </span>
             </div>
           ))}
         </div>
