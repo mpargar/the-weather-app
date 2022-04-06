@@ -1,0 +1,52 @@
+@import "../../styles/palette";
+
+.inputWrapper {
+  box-shadow: 0px 4px 4px #00000040;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  display: flex;
+  background-color: white;
+  position: relative;
+  > input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 20px;
+    color: $primary;
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    &::placeholder {
+      color: white;
+    }
+  }
+  > label {
+    transition: all 0.2s ease-out;
+    color: $primary;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-size: 20px;
+  }
+  .active {
+    background-color: transparent;
+    top: -15px;
+    left: 25px;
+    font-size: 12px;
+  }
+}
+.error {
+  color: #950000;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 25px;
+}
+.postponeComponent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 3px solid $accent;
+}

@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <main>
+      <div
+        class="floatingLogosContainer"
+        data-testid="floating-logos-container"
+      >
+        <img
+          alt="Distillery logo"
+          class="logo"
+          src="/img/distillery.svg"
+        />
+        <img
+          alt="Insight2profit logo"
+          class="logo"
+          src="/img/insight2profit.svg"
+        />
+      </div>
+      <div
+        class="logoContainer"
+      >
+        <img
+          alt="The wheater app logo"
+          class="logo"
+          src="/img/logo.svg"
+        />
+        <h1>
+          The wheater app
+        </h1>
+      </div>
+      <form>
+        <div
+          class="inputWrapper"
+        >
+          <label
+            class=""
+            for="address"
+            role="label"
+          >
+            Insert an address...
+          </label>
+          <input
+            autocomplete="off"
+            id="address"
+            placeholder="Insert an address..."
+            role="input"
+            type="text"
+            value=""
+          />
+          <div
+            class="postponeComponent"
+            data-testid="postponeComponent"
+          >
+            <button
+              class="button primary"
+              data-testid="custom-button"
+              style="height: 100%; min-width: 100px; border-radius: 0 30px 30px 0;"
+              type="submit"
+            >
+              Search 
+              <img
+                alt="Search icon"
+                src="/img/searchIcon.svg"
+              />
+            </button>
+          </div>
+        </div>
+      </form>
+      <div
+        class="daysWrapper"
+      />
+    </main>
+  </div>
+</div>
+`;
