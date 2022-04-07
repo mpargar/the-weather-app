@@ -26,7 +26,6 @@ describe("useCards hook", () => {
   it("Should return the right amount of forecast options", () => {
     const { result } = renderHook(() => fakeEnvironment());
     expect(result.current.forecast.length).toBe(0);
-    expect(result.current.currentCard).toBe(null);
     act(() => {
       result.current.setResults(fakePeriods);
     });
@@ -43,7 +42,30 @@ describe("useCards hook", () => {
     expect(result.current.forecast.length).toBe(3);
   });
 
-  it("", () => {
+  it("Should return the correct selected forecast data", () => {
     const { result } = renderHook(() => fakeEnvironment());
+    expect(result.current.currentCard).toBe(null);
+    act(() => {
+      result.current.setResults(fakePeriods);
+    });
+    // Should render "Today by default"
+    expect(result.current.currentCard?.name).toBe("Today");
+    expect(result.current.currentCard?.forecast[0]).toBe(fakePeriods[0]);
+    expect(result.current.currentCard?.forecast[1]).toBe(fakePeriods[1]);
+    // Should return the selected forecast
+    result.current.forecast.forEach((f, fIndex) => {
+      act(() => {
+        result.current.handleSelectDay(result.current.forecast[fIndex]);
+      });
+      expect(result.current.currentCard?.name).toBe(
+        result.current.forecast[fIndex]?.name
+      );
+      expect(result.current.currentCard?.forecast[0]).toBe(
+        fakePeriods[fIndex * 2]
+      );
+      expect(result.current.currentCard?.forecast[1]).toBe(
+        fakePeriods[fIndex * 2 + 1]
+      );
+    });
   });
 });
