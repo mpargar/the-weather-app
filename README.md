@@ -1,5 +1,5 @@
 # Next.js + Jest + TS
-Integrative exercise of Next, jest and typescript based on a previously done codechallenge.
+Integrative exercise using Next, jest and typescript based on a previously done codechallenge.
 
 ## Run project
 ```bash
