@@ -7,7 +7,7 @@ const useSearch = (address: string) => {
   const [results, setResults] = useState<TForecastPeriod[]>([]);
   const [message, setMessage] = useState("");
 
-  const handleSearch = async (e: FormEvent) => {
+  const handleSearch = async (e: FormEvent | Event) => {
     e.preventDefault();
     setLoading(true);
     setMessage("");
