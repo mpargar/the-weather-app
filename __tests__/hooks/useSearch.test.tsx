@@ -22,6 +22,7 @@ describe("useSearch hook", () => {
     await act(async () => {
       await result.current.handleSearch(event);
     });
+    expect(preventDefault).toBeCalledTimes(1);
     expect(result.current.results).toMatchObject(fakePeriods);
     server200.close();
   });
