@@ -33,7 +33,9 @@ exports[`renders homepage unchanged 1`] = `
           The wheater app
         </h1>
       </div>
-      <form>
+      <form
+        data-testid="search-form"
+      >
         <div
           class="inputWrapper"
         >
@@ -73,6 +75,7 @@ exports[`renders homepage unchanged 1`] = `
       </form>
       <div
         class="daysWrapper"
+        data-testid="forecast-buttons-wrapper"
       />
     </main>
   </div>
