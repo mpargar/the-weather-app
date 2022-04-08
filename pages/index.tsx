@@ -21,7 +21,7 @@ export default function Home() {
       <main>
         <FloatingLogos />
         <Logo />
-        <form onSubmit={handleSearch}>
+        <form onSubmit={handleSearch} data-testid="search-form">
           <Input
             id="address"
             placeholder="Insert an address..."

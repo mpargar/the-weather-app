@@ -14,7 +14,10 @@ const Results = ({ results, numberOfDaysToShow = 7 }: IResults) => {
   );
   return (
     <>
-      <div className={styles.daysWrapper}>
+      <div
+        data-testid="forecast-buttons-wrapper"
+        className={styles.daysWrapper}
+      >
         {forecast.map((day, index) => (
           <Button
             key={index}
